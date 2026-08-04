@@ -1,0 +1,14 @@
+import { apiClient, toApiError, unwrap } from '../../../api/client';
+
+async function call(promise) {
+  try {
+    return await unwrap(promise);
+  } catch (error) {
+    throw toApiError(error);
+  }
+}
+
+export const netWorthApi = {
+  current: () => call(apiClient.get('/net-worth/current')),
+  trend: (params) => call(apiClient.get('/net-worth/trend', { params })),
+};

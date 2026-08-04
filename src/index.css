@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* QuickAddBar's mic button while listening — CSS replacement for the mobile
+   app's Reanimated withRepeat(withSequence(...)) pulse on the mic icon. */
+@keyframes mic-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+.animate-mic-pulse {
+  animation: mic-pulse 1100ms ease-in-out infinite;
+}
+
+/* CalendarView's month/week grid on navigation — CSS replacement for the
+   mobile app's Reanimated FadeIn.duration(150) on the grid container. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 150ms ease-out;
+}
