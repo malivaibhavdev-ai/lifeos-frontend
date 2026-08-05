@@ -1,0 +1,1 @@
+import{n as e}from"./vendor-query-CEtGIeA5.js";import{C as t,T as n,w as r}from"./index-BEgk968K.js";async function i(e){try{return await n(e)}catch(e){throw r(e)}}var a={getSummary:()=>i(t.get(`/health/summary`))},o={summary:[`healthHub`,`summary`]};function s(){return e({queryKey:o.summary,queryFn:()=>a.getSummary()})}export{s as t};

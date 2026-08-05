@@ -3,6 +3,7 @@ import { Icon } from '../components/ui/Icon';
 import { useAuthStore } from '../Store/authStore';
 import { MODULES, MODULE_ROUTES, MORE_MENU_ORDER } from '../constants/modules';
 import { COLORS } from '../theme/colors';
+import { useNotificationStore } from '../modules/Notifications/store/notificationStore';
 
 // Cycled per row so the module list reads as a set of distinct destinations
 // rather than one flat blue list — same alpha-chip technique as the Dashboard
@@ -21,7 +22,7 @@ function initials(name) {
   return name.trim().split(/\s+/).slice(0, 2).map((part) => part[0]?.toUpperCase()).join('');
 }
 
-function NavRow({ to, label, icon, color }) {
+function NavRow({ to, label, icon, color, badge }) {
   return (
     <NavLink
       to={to}
@@ -35,12 +36,18 @@ function NavRow({ to, label, icon, color }) {
         <Icon name={icon} size={18} color={color} />
       </div>
       <span className="flex-1 text-base font-medium text-gray-900 dark:text-white">{label}</span>
+      {badge > 0 ? (
+        <span className="ml-2 flex h-5 min-w-[20px] items-center justify-center rounded-full bg-danger px-1.5 text-[11px] font-bold text-white">
+          {badge > 99 ? '99+' : badge}
+        </span>
+      ) : null}
     </NavLink>
   );
 }
 
 export function SidebarContent({ onNavigate }) {
   const user = useAuthStore((s) => s.user);
+  const unreadCount = useNotificationStore((s) => s.unreadCount);
 
   return (
     <div className="flex h-full flex-1 flex-col bg-white dark:bg-gray-900" onClick={onNavigate}>
@@ -69,6 +76,7 @@ export function SidebarContent({ onNavigate }) {
               label={MODULES[key].title}
               icon={MODULES[key].icon}
               color={ROW_COLORS[(index + PRIMARY_ITEMS.length) % ROW_COLORS.length]}
+              badge={key === 'notifications' ? unreadCount : 0}
             />
           ))}
         </div>

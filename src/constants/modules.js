@@ -17,7 +17,7 @@ export const MODULES = {
   family: { key: 'family', title: 'Family', description: 'Manage your household together — members, chores, events, and more.', icon: 'people-outline' },
   documents: { key: 'documents', title: 'Documents', description: 'Your document operating system — folders, OCR, versions, sharing, and automation.', icon: 'folder-outline' },
   analytics: { key: 'analytics', title: 'Analytics', description: 'Your Life Score, trends, correlations, insights, and custom dashboards across every module.', icon: 'stats-chart-outline' },
-  notifications: { key: 'notifications', title: 'Notifications', description: 'Manage your reminders and alerts.', icon: 'notifications-outline' },
+  notifications: { key: 'notifications', title: 'Notifications', description: 'Smart delivery, rules, digests, and cross-device alerts.', icon: 'notifications-outline' },
   settings: { key: 'settings', title: 'Settings', description: 'Configure app preferences and security.', icon: 'settings-outline' },
   profile: { key: 'profile', title: 'Profile', description: 'View and manage your account.', icon: 'person-circle-outline' },
 };

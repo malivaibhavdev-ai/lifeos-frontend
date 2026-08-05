@@ -34,6 +34,8 @@ import {
   IoFolderOpenOutline, IoGitBranchOutline, IoHammerOutline, IoLockOpenOutline, IoPinOutline,
   IoScanOutline, IoServerOutline, IoShareSocialOutline,
   IoAppsOutline, IoCalculatorOutline, IoFilterOutline,
+  IoWarningOutline, IoMegaphoneOutline, IoNewspaperOutline, IoLogoApple, IoLogoAndroid,
+  IoPhonePortraitOutline, IoOptionsOutline, IoHardwareChipOutline,
 } from 'react-icons/io5';
 
 // Every Ionicons name actually used across the app, explicitly named-
@@ -115,6 +117,10 @@ const ICONS = {
   'hammer-outline': IoHammerOutline, 'lock-open-outline': IoLockOpenOutline, 'pin-outline': IoPinOutline,
   'scan-outline': IoScanOutline, 'server-outline': IoServerOutline, 'share-social-outline': IoShareSocialOutline,
   'apps-outline': IoAppsOutline, 'calculator-outline': IoCalculatorOutline, 'filter-outline': IoFilterOutline,
+  'warning-outline': IoWarningOutline, 'megaphone-outline': IoMegaphoneOutline,
+  'newspaper-outline': IoNewspaperOutline, 'logo-apple': IoLogoApple, 'logo-android': IoLogoAndroid,
+  'phone-portrait-outline': IoPhonePortraitOutline, 'options-outline': IoOptionsOutline,
+  'hardware-chip-outline': IoHardwareChipOutline,
 };
 
 export function Icon({ name, size = 20, color, className, style }) {

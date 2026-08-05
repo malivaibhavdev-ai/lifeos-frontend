@@ -141,7 +141,15 @@ const AnalyticsAlertsScreen = lazy(() => import('../modules/Analytics/screens/Al
 const AnalyticsTimelineScreen = lazy(() => import('../modules/Analytics/screens/TimelineScreen').then((m) => ({ default: m.TimelineScreen })));
 const KnowledgeGraphScreen = lazy(() => import('../modules/Analytics/screens/KnowledgeGraphScreen').then((m) => ({ default: m.KnowledgeGraphScreen })));
 const AnalyticsSearchScreen = lazy(() => import('../modules/Analytics/screens/AnalyticsSearchScreen').then((m) => ({ default: m.AnalyticsSearchScreen })));
-const NotificationsScreen = lazy(() => import('../modules/Notifications/screens/NotificationsScreen').then((m) => ({ default: m.NotificationsScreen })));
+const NotificationCenterScreen = lazy(() => import('../modules/Notifications/screens/NotificationCenterScreen').then((m) => ({ default: m.NotificationCenterScreen })));
+const NotificationDetailScreen = lazy(() => import('../modules/Notifications/screens/NotificationDetailScreen').then((m) => ({ default: m.NotificationDetailScreen })));
+const NotificationDashboardScreen = lazy(() => import('../modules/Notifications/screens/NotificationDashboardScreen').then((m) => ({ default: m.NotificationDashboardScreen })));
+const NotificationSearchScreen = lazy(() => import('../modules/Notifications/screens/NotificationSearchScreen').then((m) => ({ default: m.NotificationSearchScreen })));
+const NotificationRulesScreen = lazy(() => import('../modules/Notifications/screens/NotificationRulesScreen').then((m) => ({ default: m.NotificationRulesScreen })));
+const NotificationRuleFormScreen = lazy(() => import('../modules/Notifications/screens/NotificationRuleFormScreen').then((m) => ({ default: m.NotificationRuleFormScreen })));
+const NotificationPreferencesScreen = lazy(() => import('../modules/Notifications/screens/NotificationPreferencesScreen').then((m) => ({ default: m.NotificationPreferencesScreen })));
+const NotificationDevicesScreen = lazy(() => import('../modules/Notifications/screens/DevicesScreen').then((m) => ({ default: m.DevicesScreen })));
+const NotificationAnalyticsScreen = lazy(() => import('../modules/Notifications/screens/NotificationAnalyticsScreen').then((m) => ({ default: m.NotificationAnalyticsScreen })));
 const SettingsScreen = lazy(() => import('../modules/Settings/screens/SettingsScreen').then((m) => ({ default: m.SettingsScreen })));
 const ProfileScreen = lazy(() => import('../modules/Profile/screens/ProfileScreen').then((m) => ({ default: m.ProfileScreen })));
 
@@ -270,7 +278,16 @@ export const router = createBrowserRouter([
               { path: 'analytics/timeline', element: <AnalyticsTimelineScreen /> },
               { path: 'analytics/graph', element: <KnowledgeGraphScreen /> },
               { path: 'analytics/search', element: <AnalyticsSearchScreen /> },
-              { path: 'notifications', element: <NotificationsScreen /> },
+              { path: 'notifications', element: <NotificationCenterScreen /> },
+              { path: 'notifications/dashboard', element: <NotificationDashboardScreen /> },
+              { path: 'notifications/search', element: <NotificationSearchScreen /> },
+              { path: 'notifications/rules', element: <NotificationRulesScreen /> },
+              { path: 'notifications/rules/new', element: <NotificationRuleFormScreen /> },
+              { path: 'notifications/rules/:ruleId', element: <NotificationRuleFormScreen /> },
+              { path: 'notifications/preferences', element: <NotificationPreferencesScreen /> },
+              { path: 'notifications/devices', element: <NotificationDevicesScreen /> },
+              { path: 'notifications/analytics', element: <NotificationAnalyticsScreen /> },
+              { path: 'notifications/:notificationId', element: <NotificationDetailScreen /> },
               { path: 'settings', element: <SettingsScreen /> },
               { path: 'profile', element: <ProfileScreen /> },
 

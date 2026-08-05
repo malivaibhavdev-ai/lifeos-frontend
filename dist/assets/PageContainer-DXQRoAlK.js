@@ -1,0 +1,1 @@
+import{r as e}from"./vendor-markdown-BC7Y0Bf-.js";var t=e();function n({children:e,className:n=``,maxWidth:r=`max-w-5xl`}){return(0,t.jsx)(`div`,{className:`mx-auto w-full ${r} px-4 py-4 sm:px-6 lg:px-8 ${n}`,children:e})}export{n as t};

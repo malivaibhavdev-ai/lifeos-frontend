@@ -1,0 +1,1 @@
+import{r as e}from"./vendor-markdown-BC7Y0Bf-.js";var t=e();function n({message:e}){return e?(0,t.jsx)(`div`,{className:`mb-4 rounded-xl bg-red-50 px-4 py-3 dark:bg-red-950`,children:(0,t.jsx)(`p`,{className:`text-sm text-danger`,children:e})}):null}export{n as t};
